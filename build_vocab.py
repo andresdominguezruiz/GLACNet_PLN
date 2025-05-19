@@ -35,7 +35,7 @@ def build_vocab(sis_file, threshold):
             caption = annotation['text']
             tokens = []
             try:
-                tokens = nltk.tokenize.word_tokenize(caption.lower())
+                tokens = nltk.tokenize.word_tokenize(caption.lower()) #Se incluye como token los carácteres especiales, PERO TODO EN MINÚSCULA.
             except Exception:
                 pass
             counter.update(tokens)
